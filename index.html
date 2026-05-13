@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>⭐ Tags Menu Infor</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<meta name="theme-color" content="#00aaff">
+
+<meta name="description" content="Pesquise qualquer usuário do Roblox com avatar, skin, amigos, grupos, jogos e informações completas.">
+
+<meta property="og:title" content="⭐ Tags Menu Infor">
+
+<meta property="og:description" content="Pesquise qualquer usuário do Roblox">
+
+<meta property="og:image" content="logo.png">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://SEUUSUARIO.github.io/NOME-DO-REPO/">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="⭐ Tags Menu Infor">
+
+<meta name="twitter:description" content="Pesquise qualquer usuário do Roblox">
+
+<meta name="twitter:image" content="logo.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+135deg,
+#050505,
+#07111f,
+#0b1022,
+#140726
+);
+
+background-size:400% 400%;
+
+animation:bg 12s ease infinite;
+
+color:white;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url('logo.png') center/cover no-repeat;
+filter:blur(10px) brightness(0.15);
+transform:scale(1.2);
+z-index:-2;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+z-index:-1;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+padding:30px;
+}
+
+.top{
+text-align:center;
+margin-bottom:35px;
+}
+
+.logo{
+width:190px;
+border-radius:30px;
+margin-bottom:20px;
+box-shadow:
+0 0 40px rgba(0,170,255,0.5);
+}
+
+.top h1{
+
+font-size:58px;
+
+font-weight:900;
+
+background:
+linear-gradient(
+90deg,
+#00e1ff,
+#0066ff,
+#7d3cff,
+#ff00aa
+);
+
+background-size:300%;
+
+animation:title 5s linear infinite;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+@keyframes title{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:300%;
+}
+
+}
+
+.top p{
+color:#bdbdbd;
+margin-top:10px;
+font-size:18px;
+}
+
+.search{
+display:flex;
+gap:15px;
+margin-bottom:35px;
+}
+
+.search input{
+flex:1;
+padding:20px;
+border:none;
+outline:none;
+border-radius:20px;
+background:#0f0f0f;
+color:white;
+font-size:16px;
+border:1px solid rgba(0,170,255,0.15);
+box-shadow:0 0 15px rgba(0,170,255,0.08);
+}
+
+.search button{
+
+padding:20px 35px;
+
+border:none;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+90deg,
+#00e1ff,
+#0066ff,
+#7d3cff
+);
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.25s;
+
+box-shadow:
+0 0 25px rgba(0,170,255,0.35);
+}
+
+.search button:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 45px rgba(0,170,255,0.6);
+
+}
+
+.card{
+background:
+linear-gradient(
+180deg,
+rgba(15,15,15,0.95),
+rgba(8,8,8,0.96)
+);
+
+border:1px solid rgba(0,255,255,0.2);
+
+backdrop-filter:blur(18px);
+
+border-radius:35px;
+
+padding:35px;
+
+text-align:center;
+
+box-shadow:
+0 0 30px rgba(0,255,255,0.1),
+0 0 80px rgba(0,0,0,0.7),
+0 0 120px rgba(0,132,255,0.08);
+
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.avatar{
+width:220px;
+border-radius:30px;
+border:4px solid #00aaff;
+margin-bottom:25px;
+box-shadow:
+0 0 35px rgba(0,170,255,0.45);
+}
+
+.fullbody{
+width:320px;
+margin-top:10px;
+margin-bottom:25px;
+filter:drop-shadow(0 0 20px rgba(0,170,255,0.35));
+}
+
+.info{
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,0.03),
+rgba(255,255,255,0.01)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+padding:25px;
+
+border-radius:25px;
+
+box-shadow:
+inset 0 0 25px rgba(255,255,255,0.02);
+}
+
+.info p{
+
+margin:16px 0;
+
+font-size:18px;
+
+color:#f1f1f1;
+
+padding:12px;
+
+border-radius:14px;
+
+background:rgba(255,255,255,0.03);
+
+transition:0.2s;
+}
+
+.info p:hover{
+
+transform:scale(1.02);
+
+background:rgba(0,170,255,0.08);
+
+}
+
+.info b{
+color:#00d9ff;
+}
+
+.loading{
+text-align:center;
+padding:20px;
+font-size:22px;
+font-weight:bold;
+}
+
+.hidden{
+display:none;
+}
+
+.notify{
+
+position:fixed;
+
+top:20px;
+right:20px;
+
+background:
+linear-gradient(
+90deg,
+#001b2e,
+#003566
+);
+
+border:1px solid #00aaff;
+
+padding:16px 24px;
+
+border-radius:18px;
+
+color:white;
+
+font-weight:bold;
+
+box-shadow:
+0 0 25px rgba(0,170,255,0.5);
+
+opacity:0;
+
+transition:0.3s;
+
+z-index:9999;
+}
+
+.notify.show{
+opacity:1;
+}
+
+.footer{
+margin-top:40px;
+text-align:center;
+color:#8f8f8f;
+font-size:15px;
+}
+
+@media(max-width:700px){
+
+.search{
+flex-direction:column;
+}
+
+.avatar{
+width:180px;
+}
+
+.fullbody{
+width:240px;
+}
+
+.top h1{
+font-size:38px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<div class="container">
+
+<div class="top">
+
+<img src="logo.png" class="logo">
+
+<h1>⭐ TAGS MENU INFOR</h1>
+
+<p>
+🎮 Pesquise qualquer usuário do Roblox
+</p>
+
+</div>
+
+<div class="search">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Digite nick ou ID do Roblox"
+>
+
+<button onclick="searchUser()">
+🔎 Pesquisar
+</button>
+
+</div>
+
+<div id="loading" class="loading hidden">
+⏳ Carregando usuário...
+</div>
+
+<div id="result" class="hidden">
+
+<div class="card">
+
+<img id="avatar" class="avatar">
+
+<img id="fullbody" class="fullbody">
+
+<div class="info">
+
+<p>👤 <b>Nick:</b> <span id="username"></span></p>
+
+<p>🪪 <b>Nome:</b> <span id="displayname"></span></p>
+
+<p>🆔 <b>ID:</b> <span id="userid"></span></p>
+
+<p>📅 <b>Conta criada:</b> <span id="created"></span></p>
+
+<p>⏳ <b>Idade da conta:</b> <span id="days"></span> dias</p>
+
+<p>👥 <b>Amigos:</b> <span id="friends"></span></p>
+
+<p>🌍 <b>Seguidores:</b> <span id="followers"></span></p>
+
+<p>📌 <b>Seguindo:</b> <span id="following"></span></p>
+
+<p>🏘️ <b>Comunidades:</b> <span id="groups"></span></p>
+
+<p>🎮 <b>Places/Jogos:</b> <span id="games"></span></p>
+
+<p>🔥 <b>Status:</b> Conta pública</p>
+
+<p>🌎 <b>Sistema:</b> Online</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+⭐ Tags Menu Infor © 2026
+</div>
+
+</div>
+
+<div id="notify" class="notify"></div>
+
+<script>
+
+const result = document.getElementById('result');
+const loading = document.getElementById('loading');
+
+function showNotify(text){
+
+const notify = document.getElementById('notify');
+
+notify.innerText = text;
+
+notify.classList.add('show');
+
+setTimeout(()=>{
+notify.classList.remove('show');
+},3000);
+
+}
+
+async function getUserId(username){
+
+const req = await fetch(
+'https://corsproxy.io/?https://users.roblox.com/v1/usernames/users',
+{
+method:'POST',
+headers:{
+'Content-Type':'application/json'
+},
+body:JSON.stringify({
+usernames:[username]
+})
+});
+
+const data = await req.json();
+
+return data.data?.[0]?.id;
+
+}
+
+async function searchUser(){
+
+try{
+
+loading.classList.remove('hidden');
+
+result.classList.add('hidden');
+
+const value =
+document.getElementById('searchInput').value.trim();
+
+if(!value){
+
+showNotify('⚠️ Digite um nick ou ID');
+
+loading.classList.add('hidden');
+
+return;
+
+}
+
+let userId = value;
+
+if(isNaN(value)){
+userId = await getUserId(value);
+}
+
+if(!userId){
+
+showNotify('❌ Usuário não encontrado');
+
+loading.classList.add('hidden');
+
+return;
+
+}
+
+const userReq = await fetch(
+`https://corsproxy.io/?https://users.roblox.com/v1/users/${userId}`
+);
+
+const user = await userReq.json();
+
+const avatarReq = await fetch(
+`https://corsproxy.io/?https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${userId}&size=720x720&format=Png&isCircular=false`
+);
+
+const avatarData = await avatarReq.json();
+
+const bodyReq = await fetch(
+`https://corsproxy.io/?https://thumbnails.roblox.com/v1/users/avatar?userIds=${userId}&size=720x720&format=Png&isCircular=false`
+);
+
+const bodyData = await bodyReq.json();
+
+const friendsReq = await fetch(
+`https://corsproxy.io/?https://friends.roblox.com/v1/users/${userId}/friends/count`
+);
+
+const friendsData = await friendsReq.json();
+
+const followersReq = await fetch(
+`https://corsproxy.io/?https://friends.roblox.com/v1/users/${userId}/followers/count`
+);
+
+const followersData = await followersReq.json();
+
+const followingReq = await fetch(
+`https://corsproxy.io/?https://friends.roblox.com/v1/users/${userId}/followings/count`
+);
+
+const followingData = await followingReq.json();
+
+const groupsReq = await fetch(
+`https://corsproxy.io/?https://groups.roblox.com/v2/users/${userId}/groups/roles`
+);
+
+const groupsData = await groupsReq.json();
+
+const gamesReq = await fetch(
+`https://corsproxy.io/?https://games.roblox.com/v2/users/${userId}/games?accessFilter=Public&limit=10&sortOrder=Asc`
+);
+
+const gamesData = await gamesReq.json();
+
+const avatar =
+avatarData.data?.[0]?.imageUrl;
+
+const bodyAvatar =
+bodyData.data?.[0]?.imageUrl;
+
+const createdDate = new Date(user.created);
+
+const days = Math.floor(
+(Date.now() - createdDate.getTime())
+/
+(1000*60*60*24)
+);
+
+document.getElementById('avatar').src =
+avatar;
+
+document.getElementById('fullbody').src =
+bodyAvatar;
+
+document.getElementById('username').innerText =
+user.name;
+
+document.getElementById('displayname').innerText =
+user.displayName;
+
+document.getElementById('userid').innerText =
+user.id;
+
+document.getElementById('created').innerText =
+createdDate.toLocaleDateString('pt-BR');
+
+document.getElementById('days').innerText =
+days;
+
+document.getElementById('friends').innerText =
+friendsData.count || 0;
+
+document.getElementById('followers').innerText =
+followersData.count || 0;
+
+document.getElementById('following').innerText =
+followingData.count || 0;
+
+document.getElementById('groups').innerText =
+groupsData.data?.length || 0;
+
+document.getElementById('games').innerText =
+gamesData.data?.length || 0;
+
+loading.classList.add('hidden');
+
+result.classList.remove('hidden');
+
+showNotify('✅ Usuário encontrado');
+
+}catch(err){
+
+console.error(err);
+
+showNotify(
+'❌ API offline ou bloqueada'
+);
+
+loading.classList.add('hidden');
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
